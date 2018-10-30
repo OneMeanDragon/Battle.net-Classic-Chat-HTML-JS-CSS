@@ -44,7 +44,7 @@ function $IconIdString(gamestring) {
 //Userlist Flag Icon to use from the .CSS
 function $IconFlagIdString(flag) {
     if(flag == 'Moderator') { return "icon-moderator"; }
-    NotificationMessage('warning', 'Unknowen/unimplemented flag [' + $errormessage + ']');
+    NotificationMessage('warning', 'Unknowen/unimplemented flag [' + flag + ']');
     return "icon-unknowen";
 }
 
