@@ -11,20 +11,6 @@ html {
     background-color: #002A38;
 }
 
-div#banner-content {
-    margin: 0 auto;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 10px;
-    border: 1px solid #000;
-    background-color: #DDEEEE;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 98%;
-}
-
 div#main-content {
     margin: 0 auto;
     margin-left: 15px;
@@ -35,34 +21,13 @@ div#main-content {
     width: 800px;
 }
 
-div.title {
-    border-bottom: 1px solid #000;
-    width: 300px;
-    text-align: center;
-    font-weight: bold;
-    height: 25px;
-    line-height: 25px;
-}
-
-div.box {
-    border: 1px solid #000;
-    background-color: #DDEEEE;
-    width: 300px;
-}
-
-.list h2 {
-    font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.messages ul {
+#main-chat ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.messages li {
+#main-chat li {
     font: 200 14px/1.5 Helvetica, Verdana, sans-serif;
     color: white;
     margin: 0;
@@ -73,55 +38,21 @@ div.box {
     border: none;
 }
 
-.box-all {
-    width: 700px;
-}
-
-td {
-    vertical-align: top;
-}
-
-div#output {
-    width: 500px;
-    height: 500px;
-    overflow-y: auto;
-    border: solid 1px;
-    display: inline-block;
-
-}
-
-#output {
+#main-chat, #main-channel-title, #main-userlist {
     background-image: url(./images/dgblock.png);
     background-repeat: repeat;
 }
-#userlist {
-    background-image: url(./images/dgblock.png);
-    background-repeat: repeat;
-}
-div#send-message {
-    margin-top: 5px;
+
+#command-input, #apikey, #command-button, #con-button {
+    height: 100%;
+    width: 100%;
 }
 
-#command-input {
-    width: 90%;
-    margin: 0px;
-}
-
-#command-button {
-    width: 5%;
-    height: 20px;
-    margin: 0px;
-}
-
-#apikey {
-    width: 460px;
-}
-
-.messages li {
+#main-chat li {
     width: 100%;
     display: inline-block;
 }
-.messages li p {
+#main-chat li p {
     margin-top: 0;
     margin-bottom: 0;
     word-wrap: break-word;
@@ -139,7 +70,7 @@ div#send-message {
     color: gold;
 }
 
-.messages li.whisper-box {
+#main-chat li.whisper-box {
     background-color: #000;
     background-image: none;
 }
@@ -183,15 +114,13 @@ div#send-message {
     color: rgb(52, 52, 233);
 }
 
-div#userlist {
-    height: 500px;
-    width: 200px;
+div#main-userlist {
     overflow-y: auto;
     border: solid 1px;
     display: inline-block;
 }
 
-.users li {
+#userlisting li {
     height: 19px;
     background-repeat: no-repeat;
     background-position-x: 5px;
@@ -201,7 +130,7 @@ div#userlist {
     color: #FFF;
     background-color: royalblue;
 }
-.users li p {
+#userlisting li p {
     font: 200 14px/1.5 Helvetica, Verdana, sans-serif;
     display: inline-block;
     height: 14px;
