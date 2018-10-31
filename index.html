@@ -20,6 +20,7 @@
         var btnConnect;
         var btnSend;
         var staticCommandInput;
+        var channeltitle;
         var lastRequestId = 0;
         var connected = false;
         var loggedonname = false;
@@ -188,6 +189,8 @@
 
         function init()
         {
+            channeltitle = document.getElementById("main-channel-title");
+            channeltitle.innerText = "";
             output = document.getElementById("messagelisting");
             btnConnect = document.getElementById("con-button");
             btnConnect.onclick = function(evt) { OnClick_btnConnect(evt) };
@@ -244,6 +247,7 @@
                 myNode.removeChild(myNode.firstChild);
             }
 
+            channeltitle.innerText = ""; //reset the channel title
             NotificationMessage('3', 'Disconnected.');
        }
 
