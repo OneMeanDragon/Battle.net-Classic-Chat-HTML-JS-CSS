@@ -21,6 +21,10 @@ div#main-content {
     width: 800px;
 }
 
+#main-chat, #main-userlist {
+    overflow-y: auto;
+}
+
 #main-chat ul {
     list-style-type: none;
     margin: 0;
