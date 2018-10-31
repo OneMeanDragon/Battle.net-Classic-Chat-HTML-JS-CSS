@@ -103,3 +103,7 @@ div.table-cell.table-rowspan {
     left: calc(100% - 220px);
     height: 20px;
 }
+#main-channel-title {
+    text-align: center;
+    color: white;
+}
