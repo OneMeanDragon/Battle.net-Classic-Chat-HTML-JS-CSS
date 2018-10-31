@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>WebSocket Bnut</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    
+    <link href="divstyles.css" rel="stylesheet" type="text/css" />
+   
     <script src="jquery.min.js"></script>
     <script src="angular.min.js"></script>
     <script src="functions.js"></script>
@@ -187,7 +188,7 @@
 
         function init()
         {
-            output = document.getElementById("output");
+            output = document.getElementById("messagelisting");
             btnConnect = document.getElementById("con-button");
             btnConnect.onclick = function(evt) { OnClick_btnConnect(evt) };
             btnConnect.defaultValue = "Connect";
@@ -286,28 +287,40 @@
     </script>
 </head>
 
+    <div class="window-location">
+        <div class="main-window">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell" id="main-apikey">
+                        <input id="apikey" value=""  ng-disabled="connected" type="password"></input>
+                    </div>
+                    <div class="table-cell" id="main-connect-button">
+                        <input class="button-cls" type="button" value="{{ connected ? 'Disconnect' : 'Connect' }}" id="con-button"></input>
+                    </div>
+                </div>
+                <div class="table-row">          
+                        <div class="table-cell" id="main-chat">
+                            <ul id="messagelisting" ng-repeat="message in messages track by $index">
 
-    <body ng-controller="ChatBotCtrl">
-        <div id="main-content">
-            <div id="banner-content">
-                API Key:
-                <input id="apikey" value=""  ng-disabled="connected" type="password"></input>
-                <input class="button-cls" type="button" value="{{ connected ? 'Disconnect' : 'Connect' }}" id="con-button"></input>
-            </div>
-            <div id="output" class="messages">
-                <ul id="messagelisting" ng-repeat="message in messages track by $index">
+                            </ul>                    
+                        </div>
+                        <div class="table-cell" id="main-channel-title">-channel name here-</div>
+                        <div class="table-cell" id="main-userlist">
+                            <ul id="userlisting" ng-repeat="user in users">
 
-                </ul>
-            </div>
-            <div id="userlist" class="users">
-                <ul id="userlisting" ng-repeat="user in users">
-
-                </ul>
-            </div>
-            <div id="send-message">
-                <input id="command-input" value="" ng-disabled="!connected"></input>
-                <input class="button-cls" type="button" value="Send" id="command-button" ng-disabled="!connected"></input>
+                            </ul>
+                        </div>
+                </div>
+                <div class="table-row">          
+                    <div class="table-cell" id="main-send-chat">
+                            <input id="command-input" value="" ng-disabled="!connected"></input>
+                    </div>
+                    <div class="table-cell" id="main-send-chat-button">
+                            <input class="button-cls" type="button" value="Send" id="command-button" ng-disabled="!connected"></input>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+    
 </html>
