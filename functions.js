@@ -210,6 +210,7 @@ function OnChannel(channelname) {
     var par2 = document.createElement("p");
     par.innerText = "You have joined channel:";
     par2.innerText = channelname;
+    channeltitle.innerText = channelname;
     par2.setAttribute('class', 'normal-em');
 
     pre.style.wordWrap = "break-word";
