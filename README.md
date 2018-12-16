@@ -12,7 +12,7 @@ Regestering your bot to Battle.net
 ---
 Log in with your game client, be sure your Email is attached to that client.
 
-Go to your "Op <yourname>" channel or Clan channel your registered to.
+Go to your "Op youronlineclientname" channel or Clan channel your registered to.
 
 Send command "/register-bot".
 
